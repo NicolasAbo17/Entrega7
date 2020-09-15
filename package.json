@@ -1,13 +1,15 @@
 {
-  "name": "Entrega7",
+  "name": "entrega7",
   "version": "1.0.0",
   "description": "Entrega7",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.20.0"
+  },
+  "devDependencies": {
     "eslint-config-prettier": "^6.11.0",
     "prettier": "^2.1.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
