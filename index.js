@@ -3,7 +3,7 @@ const axios = require("axios");
 var proveedores;
 axios
   .get(
-    "https://gist.githubusercontent.com/josejbocanegra/d3b26f97573a823a9d0df4ec68fef45f/raw/66440575649e007a9770bcd480badcbbc6a41ba7/proveedores.json"
+    "https://gist.githubusercontent.com/josejbocanegra/d3b26f97573a823a9d0df4ec68fef45f/raw/66440575649e007a9770bcd480badcbbc6a41ba7/proveedores.json",
   )
   .then((data) => {
     proveedores = data;
@@ -12,7 +12,7 @@ axios
 var clientes;
 axios
   .get(
-    "https://gist.githubusercontent.com/josejbocanegra/986182ce2dd3e6246adcf960f9cda061/raw/f013c156f37c34117c0d4ba9779b15d427fb8dcd/clientes.json"
+    "https://gist.githubusercontent.com/josejbocanegra/986182ce2dd3e6246adcf960f9cda061/raw/f013c156f37c34117c0d4ba9779b15d427fb8dcd/clientes.json",
   )
   .then((data) => {
     clientes = data;
@@ -52,11 +52,11 @@ http
           <tr>\
               <th>ID</th><th>NOMBRE</th><th>CONTACTO</th>\
           </tr>\
-        </thead>'
+        </thead>',
           );
           for (let proveedor of proveedores) {
             res.write(
-              `<tr><td>${proveedor.idproveedor}</td><td>${proveedor.nombrecompania}</td><td>${proveedor.nombrecontacto}</td></tr>`
+              `<tr><td>${proveedor.idproveedor}</td><td>${proveedor.nombrecompania}</td><td>${proveedor.nombrecontacto}</td></tr>`,
             );
           }
           res.end(finArchivo);
@@ -76,13 +76,13 @@ http
             '<table class="table table-striped">\
             <thead>\
               <tr>\
-                  <th>ID</th><th>Nombre</th><th>Contacto</th>\
+                  <th>ID</th><th>NOMBRE</th><th>CONTACTO</th>\
               </tr>\
-            </thead>'
+            </thead>',
           );
           for (let cliente of clientes)
             res.write(
-              `<tr><td>${dato.idCliente}</td><td>${dato.NombreCompania}</td><td>${dato.NombreContacto}</td></tr>`
+              `<tr><td>${dato.idCliente}</td><td>${dato.NombreCompania}</td><td>${dato.NombreContacto}</td></tr>`,
             );
           res.end(finArchivo);
         }
